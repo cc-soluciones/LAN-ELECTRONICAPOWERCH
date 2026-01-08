@@ -5,8 +5,10 @@ export function CTASection() {
   const whatsappUrl = `https://wa.me/56972142601?text=${encodeURIComponent("Hola, me gustaría solicitar una cotización para un sistema solar.")}`
 
   return (
-    <section className="py-20 bg-primary text-primary-foreground">
-      <div className="container mx-auto px-4 text-center">
+    <section className="relative py-20 bg-primary text-primary-foreground overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-no-repeat bg-top" style={{ backgroundImage: "url('/cta.webp')" }}/>
+      <div className="absolute inset-0 bg-primary/50" />
+      <div className="relative container mx-auto px-4 text-center z-20">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Solicita tu Cotización Hoy</h2>
         <p className="text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90 leading-relaxed">
           Nuestros expertos diseñarán una solución solar adaptada a tus necesidades específicas. Obtén una cotización

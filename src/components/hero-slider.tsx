@@ -8,17 +8,17 @@ const slides = [
   {
     title: "Energía Solar Residencial para tu Hogar",
     description: "Transforma tu hogar en un espacio autosuficiente con energía solar de alta eficiencia.",
-    image: "/modern-residential-house-with-solar-panels-on-roof.jpg",
+    image: "/hero_3.webp",
   },
   {
     title: "Montaje en Cubierta",
     description: "Aprovecha la energía solar desde tu techo con una instalación profesional y segura.",
-    image: "/technician-installing-solar-panels-on-residential-.jpg",
+    image: "/hero_2.webp",
   },
   {
     title: "Energía Solar Off-Grid",
     description: "Independízate de la red eléctrica con sistemas solares con baterías de alta capacidad.",
-    image: "/off-grid-solar-system-with-battery-storage--modern.jpg",
+    image: "/hero_1.webp",
   },
 ]
 
@@ -42,7 +42,7 @@ export function HeroSlider() {
   }
 
   return (
-    <section id="inicio" className="relative h-[600px] md:h-[700px] overflow-hidden mt-[73px]">
+    <section id="inicio" className="relative h-150 md:h-[700px] overflow-hidden mt-[73px]">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -50,9 +50,15 @@ export function HeroSlider() {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
-          <img src={slide.image || "/placeholder.svg"} alt={slide.title} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 flex items-center">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60 z-10" />
+          <img
+            src={slide.image || "/placeholder.svg"}
+            alt={slide.title}
+            className={`w-full h-full object-cover z-0 transform transition-transform duration-[5000ms] ease-out ${
+              index === currentSlide ? "scale-100" : "scale-110"
+            }`}
+          />
+          <div className="absolute inset-0 flex items-center z-20">
             <div className="container mx-auto px-4">
               <div className="max-w-2xl">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">{slide.title}</h1>
@@ -71,21 +77,21 @@ export function HeroSlider() {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 rounded-full transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 rounded-full transition-all cursor-pointer z-20"
         aria-label="Previous slide"
       >
         <ChevronLeft size={24} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 rounded-full transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-2 rounded-full transition-all cursor-pointer z-20"
         aria-label="Next slide"
       >
         <ChevronRight size={24} />
       </button>
 
       {/* Dots Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
