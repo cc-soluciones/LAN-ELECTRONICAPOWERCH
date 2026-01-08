@@ -1,1 +1,1 @@
-export const buttonPrice = "Cotización";
+export const buttonPrice = "Solicita tu cotización";

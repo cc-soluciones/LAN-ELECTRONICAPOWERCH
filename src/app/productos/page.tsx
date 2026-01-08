@@ -1,5 +1,5 @@
 import { ProductsSection } from "@/components/products-section"
-import { CTASection } from "@/components/cta-section"
+import { CTASection } from "@/components/CTASection";
 import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
 

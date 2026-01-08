@@ -26,3 +26,6 @@ export const navigations = [
         label : "Contacto"
     },
 ];
+
+export const titleCTA = "Solicita tu Cotización Hoy";
+export const descriptionCTA = "Nuestros expertos diseñarán una solución solar adaptada a tus necesidades específicas. Obtén una cotización personalizada sin compromiso.";

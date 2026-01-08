@@ -1,5 +1,5 @@
 import { AboutSection } from "@/components/about-section"
-import { CTASection } from "@/components/cta-section"
+import { CTASection } from "@/components/CTASection";
 import { Users, Award, TrendingUp, Shield } from "lucide-react"
 
 export default function NosotrosPage() {
