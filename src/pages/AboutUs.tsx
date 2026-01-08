@@ -1,5 +1,5 @@
 import { AboutSection } from "@/components/AboutSection";
-import { stats, values, mission, vision, titleAboutUs, descriptionAboutUs } from "@/constants/aboutUs";
+import { stats, values, mission, vision, titleAboutUs, descriptionAboutUs, titleValues, descriptionValues } from "@/constants/aboutUs";
 
 export const AboutUs = () => (
     <>
@@ -48,13 +48,13 @@ export const AboutUs = () => (
 
             <div className="relative container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+                    <div className="bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-lg">
                         <h3 className="text-2xl font-bold text-primary mb-4">
                             {mission.title}
                         </h3>
                         <p className="text-foreground">{mission.description}</p>
                     </div>
-                    <div className="bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+                    <div className="bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-lg">
                         <h3 className="text-2xl font-bold text-primary mb-4">
                             {vision.title}
                         </h3>
@@ -68,10 +68,10 @@ export const AboutUs = () => (
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                        Nuestros Valores
+                        {titleValues}
                     </h2>
                     <p className="text-muted-foreground max-w-2xl mx-auto">
-                        Los principios que guían nuestro trabajo cada día
+                        {descriptionValues}
                     </p>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

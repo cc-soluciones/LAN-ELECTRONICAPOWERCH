@@ -79,3 +79,6 @@ export const highlights = [
     "Cobertura desde Región Metropolitana a Chiloé",
     "2 años de garantía y soporte técnico 24/7",
 ];
+
+export const titleValues = "Nuestros Valores";
+export const descriptionValues = "Los principios que guían nuestro trabajo cada día";
