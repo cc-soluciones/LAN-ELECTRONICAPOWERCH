@@ -101,30 +101,6 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Nuestro Equipo</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Profesionales comprometidos con tu proyecto solar</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-card p-8 rounded-lg border border-border text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-10 h-10 text-primary" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-2">{member.name}</h3>
-                <div className="text-sm text-primary font-medium mb-3">{member.role}</div>
-                <p className="text-muted-foreground text-sm">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTASection />
     </main>
   )
 }

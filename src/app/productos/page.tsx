@@ -58,27 +58,7 @@ export default function ProductosPage() {
   const whatsappUrl = `https://wa.me/56972142601?text=${encodeURIComponent("Hola, me gustaría información sobre sus productos solares.")}`
 
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Nuestros Productos
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-8">
-              Equipos solares de las mejores marcas internacionales con garantía y soporte técnico
-            </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                Solicitar Catálogo
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Products Overview */}
+    <main className="min-h-screen">      
       <ProductsSection />
 
       {/* Detailed Categories */}
@@ -126,6 +106,8 @@ export default function ProductosPage() {
         </div>
       </section>
 
+      <CTASection />
+
       {/* Technical Support */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -143,8 +125,6 @@ export default function ProductosPage() {
           </div>
         </div>
       </section>
-
-      <CTASection />
     </main>
   )
 }

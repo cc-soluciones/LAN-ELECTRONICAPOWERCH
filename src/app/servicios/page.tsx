@@ -19,38 +19,38 @@ export default function ServiciosPage() {
   const mainServices = [
     {
       icon: Home,
-      title: "Sistemas Residenciales",
-      description: "Instalaciones solares para casas y departamentos",
+      title: "Instalaciones Residenciales",
+      description: "Sistemas fotovoltaicos para casas y departamentos",
       benefits: [
-        "Reducción de hasta 95% en cuenta eléctrica",
-        "Sistema on-grid conectado a la red",
-        "Inyección de excedentes (Net Billing)",
-        "Dimensionamiento personalizado",
-        "Instalación en 3-5 días",
+        "Reducción significativa en la cuenta eléctrica",
+        "Sistemas on-grid y off-grid disponibles",
+        "Diseño personalizado según consumo y espacio",
+        "Instalación profesional rápida",
+        "2 años de garantía incluida",
       ],
     },
     {
       icon: Building2,
-      title: "Sistemas Comerciales",
-      description: "Soluciones para negocios y oficinas",
+      title: "Instalaciones Comerciales",
+      description: "Soluciones solares para negocios y oficinas",
       benefits: [
-        "ROI en 3-5 años",
-        "Monitoreo en tiempo real",
-        "Mantenimiento programado",
-        "Sistemas de respaldo con baterías",
-        "Certificación energética",
+        "Monitoreo y control del consumo eléctrico",
+        "Sistemas de respaldo con baterías de litio",
+        "Mantenimiento y soporte 24/7",
+        "Equipos de alta eficiencia y durabilidad",
+        "Asesoría técnica y diseño a medida",
       ],
     },
     {
       icon: Factory,
-      title: "Sistemas Industriales",
+      title: "Instalaciones Industriales",
       description: "Proyectos de gran escala para industrias",
       benefits: [
-        "Sistemas de alta potencia (100kW+)",
-        "Análisis de consumo energético",
-        "Integración con sistemas existentes",
-        "Monitoreo SCADA",
-        "Financiamiento disponible",
+        "Sistemas de alta potencia para consumo industrial",
+        "Integración con sistemas eléctricos existentes",
+        "Monitoreo en tiempo real",
+        "Optimización de consumo y costos",
+        "Financiamiento y planificación disponible",
       ],
     },
     {
@@ -59,10 +59,10 @@ export default function ServiciosPage() {
       description: "Soluciones autónomas sin conexión a red",
       benefits: [
         "Independencia energética total",
-        "Ideal para zonas rurales",
-        "Sistema con baterías de litio",
-        "Respaldo de generador (opcional)",
+        "Ideal para zonas rurales y regadíos solares",
+        "Baterías de litio de alta capacidad",
         "Dimensionamiento según consumo",
+        "Soporte técnico y posventa 24/7",
       ],
     },
   ]
@@ -70,13 +70,13 @@ export default function ServiciosPage() {
   const additionalServices = [
     {
       icon: ClipboardCheck,
-      title: "Asesoría y Diseño",
-      description: "Evaluación técnica y diseño personalizado de tu sistema solar",
+      title: "Venta de Equipos Solares",
+      description: "Paneles solares, inversores, controladores y estructuras",
     },
     {
       icon: Wrench,
       title: "Instalación Profesional",
-      description: "Equipo certificado con más de 500 instalaciones exitosas",
+      description: "Equipo certificado con experiencia en residencias e industrias",
     },
     {
       icon: LineChart,
@@ -85,18 +85,8 @@ export default function ServiciosPage() {
     },
     {
       icon: Shield,
-      title: "Mantenimiento",
-      description: "Servicio preventivo y correctivo con garantía extendida",
-    },
-    {
-      icon: Zap,
-      title: "Gestión de Permisos",
-      description: "Tramitamos los permisos ante la distribuidora eléctrica",
-    },
-    {
-      icon: Battery,
-      title: "Sistemas de Respaldo",
-      description: "Baterías de litio para energía 24/7 sin interrupciones",
+      title: "Garantía y Soporte",
+      description: "2 años de garantía y atención posventa 24/7",
     },
   ]
 
@@ -109,7 +99,7 @@ export default function ServiciosPage() {
     {
       number: "02",
       title: "Evaluación",
-      description: "Analizamos tu consumo y espacio disponible",
+      description: "Analizamos tu consumo y el tipo de instalación requerida",
     },
     {
       number: "03",
@@ -119,17 +109,17 @@ export default function ServiciosPage() {
     {
       number: "04",
       title: "Instalación",
-      description: "Montaje profesional en 3-7 días según proyecto",
+      description: "Montaje profesional según el tipo de proyecto",
     },
     {
       number: "05",
       title: "Conexión",
-      description: "Tramitamos permisos y conectamos tu sistema",
+      description: "Sistemas on-grid conectados a red o off-grid independientes",
     },
     {
       number: "06",
       title: "Soporte",
-      description: "Seguimiento continuo y mantenimiento programado",
+      description: "Seguimiento continuo y atención postventa 24/7",
     },
   ]
 
@@ -137,28 +127,8 @@ export default function ServiciosPage() {
 
   return (
     <main className="min-h-screen">
-
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">
-              Nuestros Servicios
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground text-pretty mb-8">
-              Soluciones solares completas desde el diseño hasta el mantenimiento
-            </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                Solicitar Cotización
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Main Services */}
-      <section className="py-20 bg-background">
+      <section className="pt-32 pb-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Tipos de Instalaciones</h2>
@@ -193,7 +163,7 @@ export default function ServiciosPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Servicios Complementarios</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">Todo lo que necesitas en un solo lugar</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-card p-6 rounded-lg border border-border text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -228,6 +198,8 @@ export default function ServiciosPage() {
         </div>
       </section>
 
+      <CTASection />
+
       {/* Coverage */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
@@ -235,8 +207,8 @@ export default function ServiciosPage() {
             <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Cobertura Nacional</h2>
             <p className="text-muted-foreground mb-8">
-              Realizamos instalaciones en todo Chile. Desde Arica a Punta Arenas, llevamos energía solar a cada rincón
-              del país.
+              Realizamos instalaciones de sistemas solares residenciales e industriales
+        desde la Región Metropolitana hasta Chiloé, llevando energía solar a cada rincón donde trabajamos.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -246,8 +218,6 @@ export default function ServiciosPage() {
           </div>
         </div>
       </section>
-
-      <CTASection />
     </main>
   )
 }
