@@ -44,29 +44,24 @@ export const info = [
     },
 ];
 
-const faqs = [
-    {
-        question: "¿Cuánto tiempo toma la instalación?",
-        answer: "Instalaciones residenciales típicamente toman entre 3-5 días. Proyectos comerciales e industriales pueden tomar de 1-4 semanas dependiendo del tamaño.",
-    },
-    {
-        question: "¿Ofrecen financiamiento?",
-        answer: "Sí, trabajamos con diversas instituciones financieras para ofrecer opciones de financiamiento flexibles adaptadas a cada cliente.",
-    },
-    {
-        question: "¿Qué garantía tienen los productos?",
-        answer: "Paneles solares: 25 años de garantía. Inversores: 5-10 años. Baterías: 10 años. Instalación: 2 años de garantía de mano de obra.",
-    },
-    {
-        question: "¿Realizan mantenimiento?",
-        answer: "Sí, ofrecemos planes de mantenimiento preventivo anuales que incluyen limpieza de paneles, revisión de conexiones y monitoreo del sistema.",
-    },
-    {
-        question: "¿Puedo inyectar energía a la red?",
-        answer: "Sí, con sistemas on-grid puedes inyectar excedentes a la red eléctrica y recibir compensación bajo la Ley de Generación Distribuida (Net Billing).",
-    },
-    {
-        question: "¿Trabajan en todo Chile?",
-        answer: "Sí, realizamos proyectos en todo el territorio nacional, desde Arica hasta Punta Arenas.",
-    },
-];
+export const titleMap = "Cobertura desde la Región Metropolitana hasta los Lagos (Chiloé)";
+export const descriptionMap = {
+    "LL": "Región de Los Lagos",
+    "LR": "Región de Los Ríos",
+    "AR": "Región de La Araucanía",
+    "BI": "Región del Biobío",
+    "NB": "Región de Ñuble",
+    "ML": "Región del Maule",
+    "LI": "Región del Libertador General Bernardo O'Higgins",
+    "RM": "Región Metropolitana de Santiago"
+};
+
+export const textSendWhatsapp = `
+    Hola, mi nombre es {name}.
+
+    Región: {region}
+    Email: {email}
+
+    Requerimiento:
+    {request}
+`;
