@@ -121,34 +121,7 @@ export default Contact;
 //             {/* <ContactSection /> */}
 
 //             {/* FAQs */}
-//             {/* <section className="py-20 bg-muted/30">
-//                 <div className="container mx-auto px-4">
-//                     <div className="text-center mb-12">
-//                         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-//                             Preguntas Frecuentes
-//                         </h2>
-//                         <p className="text-muted-foreground max-w-2xl mx-auto">
-//                             Respuestas a las consultas más comunes
-//                         </p>
-//                     </div>
-//                     <div className="max-w-3xl mx-auto space-y-4">
-//                         {faqs.map((faq, index) => (
-//                             <div
-//                                 key={index}
-//                                 className="bg-card p-6 rounded-lg border border-border"
-//                             >
-//                                 <h3 className="text-lg font-semibold text-foreground mb-3">
-//                                     {faq.question}
-//                                 </h3>
-//                                 <p className="text-muted-foreground">
-//                                     {faq.answer}
-//                                 </p>
-//                             </div>
-//                         ))}
-//                     </div>
-//                 </div>
-//             </section> */}
-
+//             {/* 
 //             {/* Map Placeholder */}
             // <section className="pb-20 bg-background">
             //     <div className="container mx-auto px-4">

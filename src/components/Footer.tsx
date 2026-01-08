@@ -13,8 +13,8 @@ import {
 } from "@/constants/footer";
 
 export const Footer = () => (
-    <footer className="bg-foreground text-background py-12">
-        <div className="container mx-auto px-4">
+    <footer className="bg-foreground text-background py-12 ">
+        <div className="container text-center mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div className="flex items-center gap-2 mb-4">
