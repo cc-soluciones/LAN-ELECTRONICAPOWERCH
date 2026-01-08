@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { CTASection } from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
 import {
@@ -139,7 +137,6 @@ export default function ServiciosPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
@@ -251,7 +248,6 @@ export default function ServiciosPage() {
       </section>
 
       <CTASection />
-      <Footer />
     </main>
   )
 }

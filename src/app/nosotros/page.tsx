@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { AboutSection } from "@/components/about-section"
 import { CTASection } from "@/components/cta-section"
 import { Users, Award, TrendingUp, Shield } from "lucide-react"
@@ -51,7 +49,6 @@ export default function NosotrosPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
@@ -128,7 +125,6 @@ export default function NosotrosPage() {
       </section>
 
       <CTASection />
-      <Footer />
     </main>
   )
 }

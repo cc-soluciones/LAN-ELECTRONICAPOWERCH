@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { ProductsSection } from "@/components/products-section"
 import { CTASection } from "@/components/cta-section"
 import { Button } from "@/components/ui/button"
@@ -61,8 +59,6 @@ export default function ProductosPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
-
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
@@ -149,7 +145,6 @@ export default function ProductosPage() {
       </section>
 
       <CTASection />
-      <Footer />
     </main>
   )
 }
