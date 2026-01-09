@@ -27,7 +27,7 @@ export function AboutSection() {
             <div className="space-y-3">
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-foreground leading-relaxed">{highlight}</span>
                 </div>
               ))}
@@ -36,9 +36,9 @@ export function AboutSection() {
 
           <div className="relative">
             <img
-              src="/solar-panel-installation-team-working-on-industria.jpg"
+              src="/about.webp"
               alt="Equipo Electronicapower"
-              className="rounded-lg shadow-xl w-full h-auto"
+              className="rounded-lg shadow-xl w-full h-150"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg hidden md:block">
               <div className="text-4xl font-bold">9+</div>

@@ -36,7 +36,7 @@ const products = [
 
 export function ProductsSection() {
   return (
-    <section id="productos" className="py-32 bg-muted/30">
+    <section id="productos" className="pt-32 pb-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">PRODUCTOS DESTACADOS ELECTRONICAPOWER</h2>

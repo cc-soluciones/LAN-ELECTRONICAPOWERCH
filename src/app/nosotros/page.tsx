@@ -47,10 +47,21 @@ export default function NosotrosPage() {
     },
   ]
 
+  const mission = {
+    title: "Nuestra Misión",
+    description:
+      "Brindar soluciones solares confiables y de alta calidad, ofreciendo instalaciones residenciales, comerciales e industriales que fomenten la eficiencia energética y el uso responsable de los recursos, con garantía y soporte 24/7 para nuestros clientes en la Región Metropolitana hasta Chiloé.",
+  }
+
+  const vision = {
+    title: "Nuestra Visión",
+    description:
+      "Ser reconocidos como un referente confiable en energía solar, ofreciendo soluciones prácticas y de calidad para nuestros clientes, promoviendo el uso responsable de la energía y el cuidado del medio ambiente.",
+  }
+
   return (
     <main className="min-h-screen">
-
-      {/* Hero Section */}
+      
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -63,8 +74,7 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -80,11 +90,28 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
+      
       <AboutSection />
 
-      {/* Values Section */}
+      <section className="relative py-24">        
+        <div className="absolute inset-0 bg-cover bg-bottom" style={{ backgroundImage: "url('/misionvision.webp')" }}>          
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <div className="relative container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8">            
+            <div className="bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-primary mb-4">{mission.title}</h3>
+              <p className="text-foreground">{mission.description}</p>
+            </div>            
+            <div className="bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-primary mb-4">{vision.title}</h3>
+              <p className="text-foreground">{vision.description}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
