@@ -1,3 +1,5 @@
+"use client";
+
 import { AboutSection } from "@/components/AboutSection";
 import { stats, values, mission, vision, titleAboutUs, descriptionAboutUs, titleValues, descriptionValues } from "@/constants/aboutUs";
 

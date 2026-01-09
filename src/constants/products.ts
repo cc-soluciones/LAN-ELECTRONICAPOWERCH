@@ -1,0 +1,2 @@
+export const titleProducts = "PRODUCTOS DESTACADOS ELECTRONICAPOWER";
+export const descriptionsProducts = "Productos de energía solar de alta eficiencia para hogares, industrias y proyectos especiales.";
