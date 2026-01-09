@@ -5,7 +5,7 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { HeroProducts } from "@/components/HeroProducts";
 import { CTASection } from "@/components/CTASection";
-import { FAQ } from "@/components/FAQ"; 
+import { FAQS } from "@/components/FAQS"; 
 
 export const Home = () => (
     <>
@@ -14,6 +14,6 @@ export const Home = () => (
         <ServicesSection/>
         <HeroProducts/>
         <CTASection />
-        <FAQ/>
+        <FAQS/>
     </>
 );
