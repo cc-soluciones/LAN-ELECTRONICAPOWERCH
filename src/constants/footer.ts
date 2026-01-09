@@ -4,4 +4,4 @@ export const description = `Especialistas en instalaciones fotovoltaicas solares
 export const coverage = `Cobertura: Santiago a Chiloé`;
 export const warranty = `Garantía: 2 años`;
 export const support = `Soporte: 24/7`;
-export const copy = `&copy; ${new Date().getFullYear()} ${name}. Todos los derechos reservados.`
+export const copy = `© ${new Date().getFullYear()} ${name}. Todos los derechos reservados.`

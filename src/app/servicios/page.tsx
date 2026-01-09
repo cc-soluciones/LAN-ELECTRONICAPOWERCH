@@ -1,3 +1,5 @@
+"use client"
+import { useState } from "react";
 import { CTASection } from "@/components/CTASection";
 import { Button } from "@/components/ui/button"
 import {
@@ -28,6 +30,7 @@ export default function ServiciosPage() {
         "Instalación profesional rápida",
         "2 años de garantía incluida",
       ],
+      image: "/residenciales.webp",
     },
     {
       icon: Building2,
@@ -40,6 +43,7 @@ export default function ServiciosPage() {
         "Equipos de alta eficiencia y durabilidad",
         "Asesoría técnica y diseño a medida",
       ],
+      image: "/comerciales.webp",
     },
     {
       icon: Factory,
@@ -52,6 +56,7 @@ export default function ServiciosPage() {
         "Optimización de consumo y costos",
         "Financiamiento y planificación disponible",
       ],
+      image: "/industriales.webp",
     },
     {
       icon: Sun,
@@ -64,6 +69,7 @@ export default function ServiciosPage() {
         "Dimensionamiento según consumo",
         "Soporte técnico y posventa 24/7",
       ],
+      image: "/offgrid.webp",
     },
   ]
 
@@ -123,6 +129,8 @@ export default function ServiciosPage() {
     },
   ]
 
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   const whatsappUrl = `https://wa.me/56972142601?text=${encodeURIComponent("Hola, me gustaría información sobre sus servicios solares.")}`
 
   return (
@@ -133,25 +141,38 @@ export default function ServiciosPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Tipos de Instalaciones</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">Sistemas solares adaptados a cada necesidad</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {mainServices.map((service, index) => (
-              <div key={index} className="bg-card p-8 rounded-lg border border-border">
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <service.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-6">{service.description}</p>
-                <div className="space-y-3">
-                  {service.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground text-sm">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
+          </div>          
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="bg-card p-8 rounded-lg border border-border">
+              {(() => { const Icon = mainServices[currentIndex].icon; return <Icon className="w-7 h-7 text-primary" /> })()}
+              <h3 className="text-2xl font-bold text-foreground mb-3">{mainServices[currentIndex].title}</h3>
+              <p className="text-muted-foreground mb-6">{mainServices[currentIndex].description}</p>
+              <div className="space-y-3">
+                {mainServices[currentIndex].benefits.map((benefit, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground text-sm">{benefit}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+              <div className="flex gap-4 mt-6 justify-center">
+                {mainServices.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-3 h-3 rounded-full ${currentIndex === idx ? "bg-primary" : "bg-primary/30"}`}
+                  />
+                ))}
+              </div>
+            </div>               
+            
+            <div className="rounded-lg overflow-hidden border border-border">
+              <img
+                src={mainServices[currentIndex].image}
+                alt={mainServices[currentIndex].title}
+                className="w-full max-h-150 object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -208,7 +229,7 @@ export default function ServiciosPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Cobertura Nacional</h2>
             <p className="text-muted-foreground mb-8">
               Realizamos instalaciones de sistemas solares residenciales e industriales
-        desde la Región Metropolitana hasta Chiloé, llevando energía solar a cada rincón donde trabajamos.
+              desde la Región Metropolitana hasta Chiloé, llevando energía solar a cada rincón donde trabajamos.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
