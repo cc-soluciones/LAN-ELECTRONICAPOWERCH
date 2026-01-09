@@ -17,7 +17,9 @@ export const FAQ = () => (
                         key={index}
                         className="bg-card p-6 rounded-lg border border-border"
                     >
-                        <h3 className="text-lg font-semibold text-foreground mb-3">{faq.question}</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-3">
+                            {faq.question}
+                        </h3>
                         <p className="text-muted-foreground">{faq.answer}</p>
                     </div>
                 ))}
