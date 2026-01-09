@@ -38,7 +38,7 @@ export const Products = () => {
             </section>
             <section className="pt-32 pb-16 bg-muted/30">
                 <div className="container mx-auto px-4">
-                    <Tabs defaultValue="todos" className="w-full">
+                    <Tabs defaultValue="Todos" className="w-full">
                         <TabsList className="h-12 mx-auto">
                             {category.map((item) => (
                                 <TabsTrigger
