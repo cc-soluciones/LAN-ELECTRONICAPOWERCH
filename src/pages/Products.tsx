@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { CTASection } from "@/components/CTASection";
@@ -23,7 +23,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export const Products = () => {
+const Products = () => {
     const [mobileCategory, setMobileCategory] = useState("Todos");
 
     return (
@@ -37,40 +37,40 @@ export const Products = () => {
                         <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                             {descriptionsProducts}
                         </p>
-                        <div className="relative w-50 h-50 m-2 mx-auto">                        
-                        <Image
-                            src="/logo.jpg"
-                            alt="Logo"
-                            fill
-                            className="object-contain"
-                            priority
-                        />                                                
+                        <div className="relative w-50 h-50 m-2 mx-auto">
+                            <Image
+                                src="/logo.jpg"
+                                alt="Logo"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
                         </div>
                     </div>
                 </div>
             </section>
             <section className="pb-16 white">
-                <div className="container mx-auto px-4">                    
+                <div className="container mx-auto px-4">
                     <div className="hidden md:block">
                         <Tabs defaultValue="Todos" className="w-full">
                             <TabsList className="h-12 mx-auto">
-                            {category.map((item) => (
-                                <TabsTrigger
-                                key={`tab-list-${item}`}
-                                className="text-md cursor-pointer p-4"
-                                value={item}
-                                >
-                                {item}
-                                </TabsTrigger>
-                            ))}
+                                {category.map((item) => (
+                                    <TabsTrigger
+                                        key={`tab-list-${item}`}
+                                        className="text-md cursor-pointer p-4"
+                                        value={item}
+                                    >
+                                        {item}
+                                    </TabsTrigger>
+                                ))}
                             </TabsList>
                             {category.map((item) => (
-                            <TabsContent key={`tab-${item}`} value={item}>
-                                <ProductsItem category={item} />
-                            </TabsContent>
+                                <TabsContent key={`tab-${item}`} value={item}>
+                                    <ProductsItem category={item} />
+                                </TabsContent>
                             ))}
                         </Tabs>
-                    </div>                    
+                    </div>
                     <div className="block md:hidden mb-4">
                         <select
                             className="w-full border border-gray-300 rounded p-2 text-foreground text-center"
@@ -78,13 +78,13 @@ export const Products = () => {
                             onChange={(e) => setMobileCategory(e.target.value)}
                         >
                             {category.map((item) => (
-                            <option key={`mobile-${item}`} value={item}>
-                                {item}
-                            </option>
+                                <option key={`mobile-${item}`} value={item}>
+                                    {item}
+                                </option>
                             ))}
-                        </select>                    
+                        </select>
                         <ProductsItem category={mobileCategory} />
-                    </div>                    
+                    </div>
                 </div>
             </section>
             <CTASection />
@@ -120,109 +120,107 @@ export const Products = () => {
 };
 
 const ProductImageCarousel = ({ images }: { images: string[] }) => {
-  const [current, setCurrent] = useState(0);
-  const intervalRef = useRef<number | null>(null); 
+    const [current, setCurrent] = useState(0);
+    const intervalRef = useRef<number | null>(null);
 
-  const startCarousel = () => {
-    if (images.length <= 1) return;
-    stopCarousel(); 
-    intervalRef.current = window.setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 1000); 
-  };
+    const startCarousel = () => {
+        if (images.length <= 1) return;
+        stopCarousel();
+        intervalRef.current = window.setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length);
+        }, 1000);
+    };
 
-  const stopCarousel = () => {
-    if (intervalRef.current !== null) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  };
+    const stopCarousel = () => {
+        if (intervalRef.current !== null) {
+            clearInterval(intervalRef.current);
+            intervalRef.current = null;
+        }
+    };
 
-  useEffect(() => {
-    return () => stopCarousel(); 
-  }, []);
+    useEffect(() => {
+        return () => stopCarousel();
+    }, []);
 
-  return (
-    <div
-      className="relative h-60 w-full overflow-hidden cursor-pointer"
-      onMouseEnter={startCarousel} 
-      onMouseLeave={stopCarousel}  
-    >
-      <Image
-        src={`/products/${images[current]}`}
-        alt="Producto"
-        fill
-        className="object-contain transition-all duration-500"
-      />
-      
-      {images.length > 1 && (
-        <div className="absolute bottom-2 right-2 flex gap-1">
-          {images.map((_, idx) => (
-            <span
-              key={idx}
-              className={`w-2 h-2 rounded-full ${
-                idx === current ? "bg-white" : "bg-white/50"
-              }`}
+    return (
+        <div
+            className="relative h-60 w-full overflow-hidden cursor-pointer"
+            onMouseEnter={startCarousel}
+            onMouseLeave={stopCarousel}
+        >
+            <Image
+                src={`/products/${images[current]}`}
+                alt="Producto"
+                fill
+                className="object-contain transition-all duration-500"
             />
-          ))}
+
+            {images.length > 1 && (
+                <div className="absolute bottom-2 right-2 flex gap-1">
+                    {images.map((_, idx) => (
+                        <span
+                            key={idx}
+                            className={`w-2 h-2 rounded-full ${
+                                idx === current ? "bg-white" : "bg-white/50"
+                            }`}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
-      )}
-    </div>
-  );
+    );
 };
 
-export default ProductImageCarousel;
-
 const ModalImageCarousel = ({ images }: { images: string[] }) => {
-  const [current, setCurrent] = useState(0);
-  const total = images.length;
+    const [current, setCurrent] = useState(0);
+    const total = images.length;
 
-  const prev = () => {
-    setCurrent((c) => (c === 0 ? total - 1 : c - 1));
-  };
+    const prev = () => {
+        setCurrent((c) => (c === 0 ? total - 1 : c - 1));
+    };
 
-  const next = () => {
-    setCurrent((c) => (c === total - 1 ? 0 : c + 1));
-  };
+    const next = () => {
+        setCurrent((c) => (c === total - 1 ? 0 : c + 1));
+    };
 
-  return (
-    <div className="relative h-56 w-full overflow-hidden rounded-lg">
-      <Image
-        src={`/products/${images[current]}`}
-        alt="Producto"
-        fill
-        className="object-contain"
-      />
+    return (
+        <div className="relative h-56 w-full overflow-hidden rounded-lg">
+            <Image
+                src={`/products/${images[current]}`}
+                alt="Producto"
+                fill
+                className="object-contain"
+            />
 
-      {total > 1 && (
-        <>
-          <button
-            onClick={prev}
-            className="absolute left-2 top-1/2 -translate-y-1/2
+            {total > 1 && (
+                <>
+                    <button
+                        onClick={prev}
+                        className="absolute left-2 top-1/2 -translate-y-1/2
                        bg-black/40 text-white rounded-full p-2
                        hover:bg-black/60 cursor-pointer"
-          >
-            <ChevronLeft size={20} />
-          </button>
+                    >
+                        <ChevronLeft size={20} />
+                    </button>
 
-          <button
-            onClick={next}
-            className="absolute right-2 top-1/2 -translate-y-1/2
+                    <button
+                        onClick={next}
+                        className="absolute right-2 top-1/2 -translate-y-1/2
                        bg-black/40 text-white rounded-full p-2
                        hover:bg-black/60 cursor-pointer"
-          >
-            <ChevronRight size={20} />
-          </button>
-        </>
-      )}
-    </div>
-  );
+                    >
+                        <ChevronRight size={20} />
+                    </button>
+                </>
+            )}
+        </div>
+    );
 };
 
 const buildModalWhatsappUrl = (product: any) => {
-  const phone = "56972142601"; 
+    const phone = "56972142601";
 
-  const message = `Hola, quiero consultar por el siguiente producto:
+    const message = `Hola, quiero consultar por el siguiente producto:
 
 - Producto: ${product.name}
 - Categoría: ${product.category}
@@ -230,7 +228,7 @@ const buildModalWhatsappUrl = (product: any) => {
 
 Quedo atento, gracias.`;
 
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 };
 
 const ProductsItem = ({ category }: { category: string }) => {
@@ -239,93 +237,104 @@ const ProductsItem = ({ category }: { category: string }) => {
 
     const filtered =
         category === "Todos"
-        ? products
-        : products.filter((p) => p.category === category);
+            ? products
+            : products.filter((p) => p.category === category);
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-        {filtered.map((p) => {
-            const images = Array.isArray(p.img) ? p.img.filter(Boolean) : [p.img];
-
-            return (
-            <Card
-                key={p.id}
-                className="overflow-hidden pt-0 cursor-pointer"
-                onClick={() => {
-                setSelected(p);
-                setOpen(true);
-                }}
-            >
-                <ProductImageCarousel key={p.id} images={images} />
-
-                <CardHeader className="pb-2">
-                <Badge variant="secondary">{p.category}</Badge>
-                </CardHeader>
-
-                <CardContent>
-                <h3 className="font-semibold">{p.name}</h3>
-                <h3 className="pt-4">$ {p.price}</h3>
-                </CardContent>
-            </Card>
-            );
-        })}
-
-        <Dialog
-            open={open}
-            onOpenChange={(value) => {
-            setOpen(value);
-            if (!value) setSelected(null);
-            }}
-        >
-            <DialogContent className="max-w-lg ">                
-            {selected && (() => {
-            const modalImages = Array.isArray(selected.img)
-                ? selected.img.filter(Boolean)
-                : [selected.img];
+            {filtered.map((p) => {
+                const images = Array.isArray(p.img)
+                    ? p.img.filter(Boolean)
+                    : [p.img];
 
                 return (
-                <>
-                    <DialogHeader>
-                    <DialogTitle>{selected.name}</DialogTitle>
-                    </DialogHeader>
+                    <Card
+                        key={p.id}
+                        className="overflow-hidden pt-0 cursor-pointer"
+                        onClick={() => {
+                            setSelected(p);
+                            setOpen(true);
+                        }}
+                    >
+                        <ProductImageCarousel key={p.id} images={images} />
 
-                    <div className="relative h-56 w-full overflow-hidden rounded-lg">
-                        <ModalImageCarousel
-                            key={selected.id}
-                            images={modalImages}
-                        />
-                    </div>
+                        <CardHeader className="pb-2">
+                            <Badge variant="secondary">{p.category}</Badge>
+                        </CardHeader>
 
-                    <Badge className="mt-2">{selected.category}</Badge>
-
-                    <p className="text-sm text-muted-foreground mt-4">
-                    {selected.description}
-                    </p>
-
-                    <h3 className="pt-4">$ {selected.price}</h3>                    
-                    <div className="mt-6">
-                        <Button
-                            asChild
-                            size="lg"
-                            className="bg-green-600 hover:bg-green-500 text-white transition-colors duration-200 w-full"
-                        >
-                            <a
-                                href={buildModalWhatsappUrl(selected)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={() => setOpen(false)}
-                                className="inline-flex items-center justify-center gap-2"
-                                >
-                                <FaWhatsapp size={20} />
-                                Consultar por WhatsApp
-                            </a>
-                        </Button>
-                    </div>
-                </>
+                        <CardContent>
+                            <h3 className="font-semibold">{p.name}</h3>
+                            <h3 className="pt-4">$ {p.price}</h3>
+                        </CardContent>
+                    </Card>
                 );
-            })()}
-            </DialogContent>
-        </Dialog>
+            })}
+
+            <Dialog
+                open={open}
+                onOpenChange={(value) => {
+                    setOpen(value);
+                    if (!value) setSelected(null);
+                }}
+            >
+                <DialogContent className="max-w-lg ">
+                    {selected &&
+                        (() => {
+                            const modalImages = Array.isArray(selected.img)
+                                ? selected.img.filter(Boolean)
+                                : [selected.img];
+
+                            return (
+                                <>
+                                    <DialogHeader>
+                                        <DialogTitle>
+                                            {selected.name}
+                                        </DialogTitle>
+                                    </DialogHeader>
+
+                                    <div className="relative h-56 w-full overflow-hidden rounded-lg">
+                                        <ModalImageCarousel
+                                            key={selected.id}
+                                            images={modalImages}
+                                        />
+                                    </div>
+
+                                    <Badge className="mt-2">
+                                        {selected.category}
+                                    </Badge>
+
+                                    <p className="text-sm text-muted-foreground mt-4">
+                                        {selected.description}
+                                    </p>
+
+                                    <h3 className="pt-4">$ {selected.price}</h3>
+                                    <div className="mt-6">
+                                        <Button
+                                            asChild
+                                            size="lg"
+                                            className="bg-green-600 hover:bg-green-500 text-white transition-colors duration-200 w-full"
+                                        >
+                                            <a
+                                                href={buildModalWhatsappUrl(
+                                                    selected
+                                                )}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={() => setOpen(false)}
+                                                className="inline-flex items-center justify-center gap-2"
+                                            >
+                                                <FaWhatsapp size={20} />
+                                                Consultar por WhatsApp
+                                            </a>
+                                        </Button>
+                                    </div>
+                                </>
+                            );
+                        })()}
+                </DialogContent>
+            </Dialog>
         </div>
     );
 };
+
+export default Products;

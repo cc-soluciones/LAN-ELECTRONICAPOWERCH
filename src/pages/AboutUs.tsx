@@ -3,7 +3,7 @@
 import { AboutSection } from "@/components/AboutSection";
 import { stats, values, mission, vision, titleAboutUs, descriptionAboutUs, titleValues, descriptionValues } from "@/constants/aboutUs";
 
-export const AboutUs = () => (
+const AboutUs = () => (
     <>
         <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
             <div className="container mx-auto px-4">
@@ -95,3 +95,5 @@ export const AboutUs = () => (
         </section>
     </>
 );
+
+export default AboutUs;

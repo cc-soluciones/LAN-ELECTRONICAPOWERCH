@@ -7,7 +7,7 @@ import { HeroProducts } from "@/components/HeroProducts";
 import { CTASection } from "@/components/CTASection";
 import { FAQS } from "@/components/FAQS"; 
 
-export const Home = () => (
+const Home = () => (
     <>
         <HeroSlider />
         <BenefitsSection />
@@ -17,3 +17,5 @@ export const Home = () => (
         <FAQS/>
     </>
 );
+
+export default Home;

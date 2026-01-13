@@ -22,7 +22,7 @@ import { contactSchema } from "@/schema/contact";
 
 type ContactForm = z.infer<typeof contactSchema>
 
-export const Contact = () => {
+const Contact = () => {
     const form = useForm<ContactForm>({
         resolver: zodResolver(contactSchema),
         defaultValues: {
@@ -189,3 +189,5 @@ export const Contact = () => {
         </div>
     );
 };
+
+export default Contact;

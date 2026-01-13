@@ -1,3 +1,3 @@
-import { Contact } from "@/pages/Contact";
+import Contact from "@/pages/Contact";
 
 export default Contact;
