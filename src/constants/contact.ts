@@ -27,7 +27,7 @@ export const info = [
     {
         icon: MapPin,
         title: "Ubicación",
-        detail: "Chile - Cobertura Nacional",
+        detail: "C. Mariquina 248, San José de Mariquina, Los Ríos",
         link: null,
     },
     {

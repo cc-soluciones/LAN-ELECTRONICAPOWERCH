@@ -171,14 +171,14 @@ export const Contact = () => {
                                 )}
                             />
 
-                            <Button type="submit" className="gap-2">
+                            <Button type="submit" className="gap-2 cursor-pointer">
                                 Enviar mensaje vía WhatsApp
                             </Button>
                         </form>
                     </Form>
                 </div>
             </section>
-            <section className="bg-background w-full mx-auto flex items-center">
+            <section id="mapChile" className="bg-background w-full mx-auto flex items-center">
                 <div className="container mx-auto px-4 mb-4">
                     <h3 className="text-lg font-semibold text-foreground text-center">
                         {titleMap}

@@ -1,5 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FaWhatsapp } from "react-icons/fa";
 import { whatsappUrl, titleCTA, descriptionCTA } from "@/constants/general";
 
 export const CTASection = () => (
@@ -19,7 +20,7 @@ export const CTASection = () => (
             <Button
                 asChild
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                className="bg-green-600 hover:bg-green-500 text-white transition-colors duration-200"
             >
                 <a
                     href={whatsappUrl}
@@ -27,7 +28,7 @@ export const CTASection = () => (
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2"
                 >
-                    <MessageCircle size={20} />
+                    <FaWhatsapp size={20} />
                     Contactar por WhatsApp
                 </a>
             </Button>

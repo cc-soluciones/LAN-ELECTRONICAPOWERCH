@@ -173,7 +173,7 @@ export const descriptionFaqs = "Respuestas a las consultas más comunes";
 export const faqs = [
     {
         question: "¿Cuánto tiempo toma la instalación?",
-        answer: "Instalaciones residenciales típicamente toman entre 3-5 días. Proyectos comerciales e industriales pueden tomar de 1-4 semanas dependiendo del tamaño.",
+        answer: "Instalaciones residenciales típicamente toman entre x días. Proyectos comerciales e industriales pueden tomar de x semanas dependiendo del tamaño.",
     },
     {
         question: "¿Ofrecen financiamiento?",
@@ -181,7 +181,7 @@ export const faqs = [
     },
     {
         question: "¿Qué garantía tienen los productos?",
-        answer: "Paneles solares: 25 años de garantía. Inversores: 5-10 años. Baterías: 10 años. Instalación: 2 años de garantía de mano de obra.",
+        answer: "Paneles solares: x años de garantía. Inversores: x años. Baterías: x años. Instalación: x años de garantía de mano de obra.",
     },
     {
         question: "¿Realizan mantenimiento?",
@@ -193,6 +193,6 @@ export const faqs = [
     },
     {
         question: "¿Trabajan en todo Chile?",
-        answer: "Sí, realizamos proyectos en todo el territorio nacional, desde Arica hasta Punta Arenas.",
+        answer: "No trabajamos en todo Chile. Nuestra cobertura va desde la Región Metropolitana hasta Chiloé.",
     },
 ];

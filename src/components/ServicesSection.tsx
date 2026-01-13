@@ -5,6 +5,8 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { services, titleServices, descriptionServices } from "@/constants/home";
 
 export const ServicesSection = () => {
@@ -112,6 +114,17 @@ export const ServicesSection = () => {
                             </Accordion>
                         </CardContent>
                     </Card>
+                </div>
+                <div className="mt-16 text-center">
+                    <Button
+                        asChild
+                        size="lg"
+                        className="bg-primary hover:bg-primary/90"
+                    >
+                        <Link href="/servicios">
+                        Conocer servicios
+                        </Link>
+                    </Button>
                 </div>
             </div>
         </section>

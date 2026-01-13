@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import { CTASection } from "@/components/CTASection";
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import {
   Home,
@@ -131,10 +132,21 @@ export default function ServiciosPage() {
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const totalSlides = mainServices.length
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1 ) % totalSlides)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => 
+    prev === 0 ? totalSlides - 1 : prev - 1)
+  }
+
   const whatsappUrl = `https://wa.me/56972142601?text=${encodeURIComponent("Hola, me gustaría información sobre sus servicios solares.")}`
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen id:servicios">
       {/* Main Services */}
       <section className="pt-32 pb-16 bg-background">
         <div className="container mx-auto px-4">
@@ -160,18 +172,32 @@ export default function ServiciosPage() {
                   <button
                     key={idx}
                     onClick={() => setCurrentIndex(idx)}
-                    className={`w-3 h-3 rounded-full ${currentIndex === idx ? "bg-primary" : "bg-primary/30"}`}
+                    className={`w-3 h-3 cursor-pointer rounded-full ${currentIndex === idx ? "bg-primary" : "bg-primary/30"}`}
                   />
                 ))}
               </div>
             </div>               
             
-            <div className="rounded-lg overflow-hidden border border-border">
+            <div className="relative rounded-lg overflow-hidden border border-border">
               <img
                 src={mainServices[currentIndex].image}
                 alt={mainServices[currentIndex].title}
                 className="w-full max-h-150 object-cover"
               />
+              <button
+                  onClick={prevSlide}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center transition cursor-pointer"
+                  aria-label="Anterior"
+                >
+                  ‹
+                </button>                
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center transition cursor-pointer"
+                  aria-label="Siguiente"
+                >
+                  ›
+              </button>
             </div>
           </div>
         </div>
@@ -232,9 +258,9 @@ export default function ServiciosPage() {
               desde la Región Metropolitana hasta Chiloé, llevando energía solar a cada rincón donde trabajamos.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Link href="contacto#mapChile">
                 Consultar Cobertura
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
