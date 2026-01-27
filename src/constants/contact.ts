@@ -7,37 +7,37 @@ import {
 
 export const info = [
     {
-        icon: Phone,
+        icon: "fluent-color:phone-48",
         title: "Teléfono",
         detail: phone,
         link: `tel:${phone.replaceAll(" ", "")}`,
     },
     {
-        icon: MessageCircle,
+        icon: "logos:whatsapp-icon",
         title: "WhatsApp",
         detail: phone,
         link: whatsappUrl,
     },
     {
-        icon: Mail,
+        icon: "fluent-color:mail-16",
         title: "Email",
         detail: email,
         link: `mailto:${email}`,
     },
     {
-        icon: MapPin,
+        icon: "streamline-plump-color:map-location-star-pin",
         title: "Ubicación",
         detail: "C. Mariquina 248, San José de Mariquina, Los Ríos",
         link: null,
     },
     {
-        icon: Clock,
+        icon: "fluent-color:clock-24",
         title: "Horario",
         detail: "Lun - Vie: 9:00 - 18:00",
         link: null,
     },
     {
-        icon: CreditCard,
+        icon: "noto-v1:credit-card",
         title: "Métodos de Pago",
         detail: "Efectivo, transferencia, tarjetas de crédito",
         link: null,

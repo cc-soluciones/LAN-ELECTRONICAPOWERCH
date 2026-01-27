@@ -1,5 +1,3 @@
-import { Zap, Leaf, Battery, TrendingUp } from "lucide-react";
-
 type ProductCategory = "Electrónica" | "Iluminación" | "Proyector de Área";
 
 export const slides = [
@@ -10,7 +8,7 @@ export const slides = [
         image: "/hero_3.webp",
     },
     {
-        title: "Montaje en Cubierta",
+        title: "Montaje sobre Tejados",
         description:
             "Aprovecha la energía solar desde tu techo con una instalación profesional y segura.",
         image: "/hero_2.webp",
@@ -25,24 +23,24 @@ export const slides = [
 
 export const benefits = [
     {
-        icon: Zap,
+        icon: "unjs:h3",
         title: "Reduce hasta 100% de costos eléctricos",
         description:
             "Ahorra significativamente en tu factura de electricidad con energía solar",
     },
     {
-        icon: Leaf,
+        icon: "streamline-emojis:leaf-fluttering-in-wind",
         title: "Energía limpia y renovable",
         description:
             "Contribuye al cuidado del medio ambiente con energía sustentable",
     },
     {
-        icon: Battery,
+        icon: "flat-color-icons:high-battery",
         title: "Independencia energética",
         description: "Libérate de la red eléctrica con sistemas off-grid",
     },
     {
-        icon: TrendingUp,
+        icon: "fluent-color:data-trending-48",
         title: "Aumenta el valor de tu propiedad",
         description:
             "Las instalaciones solares incrementan el valor de tu inmueble",
@@ -71,13 +69,13 @@ export const services = {
                 value: "off-grid",
                 title: "Kits Solares Off Grid",
                 description:
-                    "Soluciones solares completamente autónomas con baterías de litio de alta capacidad. Recomendadas para zonas rurales o sectores sin acceso estable a la red eléctrica.",
+                    "Soluciones solares completamente autónomas, equipadas con baterías de litio de alta capacidad, recomendadas para zonas rurales y sectores sin acceso estable y continuo a la red eléctrica. Asimismo, son una alternativa ideal para zonas urbanas que deseen alcanzar un mayor nivel de independencia del sistema de red eléctrica tradicional de pago.",
             },
             {
                 value: "insumos",
                 title: "Venta de Insumos Solares",
                 description:
-                    "Suministro de baterías de litio, paneles solares, inversores, controladores de carga y estructuras de montaje, con garantía y soporte técnico especializado.",
+                    "Suministro de baterías de litio, paneles solares, inversores, controladores de carga, cables solares de 4 y 6 mm², y estructuras de montaje para sistemas fotovoltaicos.",
             },
         ],
     },
@@ -98,7 +96,7 @@ export const services = {
             {
                 title: "Regadío Solar",
                 description:
-                    "Implementación de soluciones solares para sistemas de riego agrícola, ideales para zonas rurales y predios sin conexión eléctrica estable.",
+                    "Implementación de soluciones solares para pozos profundos y sistemas de riego agrícola, especialmente diseñadas para zonas rurales, predios y parcelas, donde se requiere autonomía energética y continuidad operativa.",
             },
         ],
     },
@@ -108,7 +106,7 @@ export const services = {
         items: [
             "2 años de garantía en todas las instalaciones",
             "Atención posventa y soporte técnico 24/7",
-            "Cobertura desde la Región Metropolitana hasta Chiloé",
+            "Cobertura de servicios a lo largo de todo Chile",
             "Medios de pago: efectivo, transferencia y tarjetas de crédito",
         ],
     },
@@ -173,15 +171,15 @@ export const descriptionFaqs = "Respuestas a las consultas más comunes";
 export const faqs = [
     {
         question: "¿Cuánto tiempo toma la instalación?",
-        answer: "Instalaciones residenciales típicamente toman entre x días. Proyectos comerciales e industriales pueden tomar de x semanas dependiendo del tamaño.",
+        answer: "Instalaciones residenciales típicamente toman entre 5 días. Proyectos comerciales e industriales pueden tomar de 2 semanas dependiendo del tamaño.",
     },
     {
         question: "¿Ofrecen financiamiento?",
-        answer: "Sí, trabajamos con diversas instituciones financieras para ofrecer opciones de financiamiento flexibles adaptadas a cada cliente.",
+        answer: "No, actualmente no ofrecemos opciones de financiamiento.",
     },
     {
         question: "¿Qué garantía tienen los productos?",
-        answer: "Paneles solares: x años de garantía. Inversores: x años. Baterías: x años. Instalación: x años de garantía de mano de obra.",
+        answer: "Las instalaciones cuentan con una garantía de 2 años otorgada por el instalador. Cada producto utilizado dispone además de su propia garantía de fábrica, la cual varía según el fabricante y el tipo de equipo.",
     },
     {
         question: "¿Realizan mantenimiento?",
@@ -193,6 +191,6 @@ export const faqs = [
     },
     {
         question: "¿Trabajan en todo Chile?",
-        answer: "No trabajamos en todo Chile. Nuestra cobertura va desde la Región Metropolitana hasta Chiloé.",
+        answer: "Sí, realizamos trabajos en todo Chile.",
     },
 ];

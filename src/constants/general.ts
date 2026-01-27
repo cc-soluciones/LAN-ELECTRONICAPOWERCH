@@ -1,6 +1,6 @@
 export const name = "Electronicapower";
 export const phone = "+56 9 7214 2601";
-export const email = "contacto@electronicapower.cl";
+export const email = "electronicapower1973@gmail.com";
 export const whatsappUrl = `https://wa.me/${phone.replaceAll(" ", "").replaceAll("+", "")}?text=${encodeURIComponent(
     "Hola, me gustaría solicitar una cotización para un sistema solar."
 )}`;

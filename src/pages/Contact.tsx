@@ -6,6 +6,7 @@ import { z } from "zod";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Icon } from "@iconify/react"
 import { Button } from "@/components/ui/button";
 import {
     Form,
@@ -58,7 +59,7 @@ const Contact = () => {
                                 className="bg-card p-6 rounded-lg border border-border text-center"
                             >
                                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <info.icon className="w-6 h-6 text-primary" />
+                                    <Icon icon={info.icon} className="w-6 h-6 text-primary"/>
                                 </div>
                                 <h3 className="text-lg font-semibold text-foreground mb-2">
                                     {info.title}

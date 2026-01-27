@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import { CTASection } from "@/components/CTASection";
+import { Icon } from "@iconify/react"
 import Link from "next/link";
 import { Button } from "@/components/ui/button"
 import {
@@ -76,22 +77,22 @@ export default function ServiciosPage() {
 
   const additionalServices = [
     {
-      icon: ClipboardCheck,
+      icon: "streamline-ultimate-color:task-list-approve",
       title: "Venta de Equipos Solares",
       description: "Paneles solares, inversores, controladores y estructuras",
     },
     {
-      icon: Wrench,
+      icon: "vscode-icons:folder-type-tools",
       title: "Instalación Profesional",
       description: "Equipo certificado con experiencia en residencias e industrias",
     },
     {
-      icon: LineChart,
+      icon: "fxemoji:chartupwardstrend",
       title: "Monitoreo",
       description: "Seguimiento en tiempo real de la producción de tu sistema",
     },
     {
-      icon: Shield,
+      icon: "noto-v1:shield",
       title: "Garantía y Soporte",
       description: "2 años de garantía y atención posventa 24/7",
     },
@@ -214,7 +215,8 @@ export default function ServiciosPage() {
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-card p-6 rounded-lg border border-border text-center">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-6 h-6 text-primary" />
+                  <Icon icon={service.icon} className={`w-6 h-6 ${service}`}
+/>
                 </div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{service.title}</h3>
                 <p className="text-muted-foreground text-sm">{service.description}</p>

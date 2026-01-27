@@ -224,7 +224,6 @@ const buildModalWhatsappUrl = (product: any) => {
 
 - Producto: ${product.name}
 - Categoría: ${product.category}
-- Precio: $${product.price}
 
 Quedo atento, gracias.`;
 
@@ -264,7 +263,11 @@ const ProductsItem = ({ category }: { category: string }) => {
 
                         <CardContent>
                             <h3 className="font-semibold">{p.name}</h3>
-                            <h3 className="pt-4">$ {p.price}</h3>
+                            <div className="pt-4">
+                            <span className="text-sm text-primary font-medium">
+                                Consultar precio
+                            </span>
+                            </div>
                         </CardContent>
                     </Card>
                 );
@@ -307,7 +310,9 @@ const ProductsItem = ({ category }: { category: string }) => {
                                         {selected.description}
                                     </p>
 
-                                    <h3 className="pt-4">$ {selected.price}</h3>
+                                    <p className="pt-4 text-sm text-muted-foreground">
+                                        Precio sujeto a disponibilidad y variación de mercado.
+                                    </p>
                                     <div className="mt-6">
                                         <Button
                                             asChild

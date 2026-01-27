@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Icon } from "@iconify/react";
 import { benefits, titleBenefits, descriptionBenefits } from "@/constants/home";
 
 export const BenefitsSection = () => {
@@ -34,7 +35,7 @@ export const BenefitsSection = () => {
                         >
                             <CardContent className="pt-6">
                                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                                    <benefit.icon className="w-6 h-6 text-primary" />
+                                    <Icon icon={benefit.icon} className="w-6 h-6 text-primary"/>
                                 </div>
                                 <h3 className="text-lg font-semibold mb-2 text-foreground">
                                     {benefit.title}

@@ -32,8 +32,16 @@ export const Header = () => {
                                 fill
                                 className="object-fill"
                                 priority
-                            />
+                            />                            
                         </div>                        
+                        <div className="flex flex-col leading-tight">
+                            <span className="text-xl font-bold text-foreground">
+                            ElectronicaPower
+                            </span>
+                            <span className="text-xs text-muted-foreground">
+                            Proyectos Solares
+                            </span>
+                        </div>
                     </Link>
 
                     {/* Desktop nav */}

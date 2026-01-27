@@ -53,7 +53,7 @@ export const values = [
 export const mission = {
     title: "Nuestra Misión",
     description:
-        "Brindar soluciones solares confiables y de alta calidad, ofreciendo instalaciones residenciales, comerciales e industriales que fomenten la eficiencia energética y el uso responsable de los recursos, con garantía y soporte 24/7 para nuestros clientes en la Región Metropolitana hasta Chiloé.",
+        "Brindar soluciones solares confiables y de alta calidad, ofreciendo instalaciones residenciales, comerciales e industriales que fomenten la eficiencia energética y el uso responsable de los recursos, con garantía y soporte 24/7 para nuestros clientes de todo Chile.",
 };
 
 export const vision = {
@@ -76,7 +76,7 @@ export const highlights = [
     "Instalaciones solares residenciales e industriales",
     "Sistemas on-grid y off-grid",
     "Ingeniería y proyectos solares personalizados",
-    "Cobertura desde Región Metropolitana a Chiloé",
+    "Cobertura nacional a lo largo de todo Chile",
     "2 años de garantía y soporte técnico 24/7",
 ];
 
