@@ -44,7 +44,7 @@ export const info = [
     },
 ];
 
-export const titleMap = "Cobertura desde la Región Metropolitana hasta los Lagos (Chiloé)";
+export const titleMap = "Cobertura en todo el territorio nacional";
 export const descriptionMap = {
     "LL": "Región de Los Lagos",
     "LR": "Región de Los Ríos",
