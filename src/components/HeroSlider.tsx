@@ -48,9 +48,9 @@ export const HeroSlider = () => {
                     <div className="absolute inset-0 flex items-center z-20">
                         <div className="container mx-auto px-4">
                             <div className="max-w-2xl">
-                                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">
+                                <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 text-balance">
                                     {slide.title}
-                                </h1>
+                                </h2>
                                 <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
                                     {slide.description}
                                 </p>
