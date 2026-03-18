@@ -280,7 +280,7 @@ const ProductsItem = ({ category }: { category: string }) => {
                     if (!value) setSelected(null);
                 }}
             >
-                <DialogContent className="max-w-lg ">
+                <DialogContent className=" w-[95%] max-w-md md:max-w-lg rounded-xl p-4 md:p-6">
                     {selected &&
                         (() => {
                             const modalImages = Array.isArray(selected.img)
