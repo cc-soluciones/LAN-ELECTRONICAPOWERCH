@@ -39,7 +39,7 @@ const Products = () => {
                         </p>
                         <div className="relative w-50 h-50 m-2 mx-auto">
                             <Image
-                                src="/logo.jpg"
+                                src="/logo.webp"
                                 alt="Logo"
                                 fill
                                 className="object-contain"

@@ -27,7 +27,7 @@ export const Header = () => {
                     <Link href="/" className="flex items-center gap-2">
                         <div className="w-10 h-10 relative">
                             <Image
-                                src="/logo.png"
+                                src="/logo.webp"
                                 alt="Logo"
                                 fill
                                 className="object-fill"

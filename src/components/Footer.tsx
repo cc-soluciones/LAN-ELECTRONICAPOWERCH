@@ -20,7 +20,7 @@ export const Footer = () => (
                 <div className="flex flex-col items-center ">                                   
                     <Link href="/" className="relative w-35 h-35 m-2">                        
                         <Image
-                            src="/logo.jpg"
+                            src="/logo.webp"
                             alt="Logo"
                             fill
                             className="object-contain"
