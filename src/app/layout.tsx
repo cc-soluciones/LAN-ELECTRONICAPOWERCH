@@ -13,7 +13,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Electronicapower - Instalaciones Fotovoltaicas Solares en Chile",
     description: "Especialistas en sistemas solares fotovoltaicos residenciales e industriales. Instalación y venta de paneles solares, baterías de litio, inversores y kits solares. Cobertura desde Santiago a Chiloé.",
-    generator: "v0.app",
+    generator: "Electronicapowerch.app",
     icons: {
         icon: [
             {
