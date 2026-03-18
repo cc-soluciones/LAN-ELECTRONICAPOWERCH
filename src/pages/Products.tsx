@@ -290,7 +290,7 @@ const ProductsItem = ({ category }: { category: string }) => {
                             return (
                                 <>
                                     <DialogHeader>
-                                        <DialogTitle>
+                                        <DialogTitle className="pr-10 text-left">
                                             {selected.name}
                                         </DialogTitle>
                                     </DialogHeader>
